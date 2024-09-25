@@ -1,0 +1,20 @@
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+             version="2.0">
+    <persistence-unit name="meuPU">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <class>entidade.Usuario</class> <!-- Certifique-se que está no pacote correto -->
+        <properties>
+            <!-- Driver JDBC -->
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/> <!-- Atualizado -->
+            <!-- URL do banco de dados -->
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/meuusuario"/>
+            <property name="javax.persistence.jdbc.user" value="root"/>
+            <property name="javax.persistence.jdbc.password" value="1992"/>
+            
+            <!-- Configurações do Hibernate -->
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect"/> <!-- Atualizado -->
+            <property name="hibernate.show_sql" value="true"/>
+        </properties>
+    </persistence-unit>
+</persistence>
